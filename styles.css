@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+:root {
+    --LimeGreen: hsl(163, 72%, 41%);
+    --BrightRed: hsl(356, 69%, 56%);
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram: linear-gradient(45deg, #fdc468, #df4996);
+    --YouTube: hsl(348, 97%, 39%);
+}
+.lightTheme {
+    --BG: hsl(0, 0%, 100%);
+    --TopBG: hsl(225, 100%, 98%);
+    --CardBG: hsl(227, 47%, 96%);
+    --TextPrimary: hsl(230, 17%, 14%);
+    --TextSecondary: hsl(228, 12%, 44%);
+}
+.darkTheme {
+    --BG: hsl(230, 17%, 14%);
+    --TopBG: hsl(232, 19%, 15%);
+    --CardBG: hsl(228, 28%, 20%);
+    --TextPrimary: hsl(0, 0%, 100%);
+    --TextSecondary: hsl(228, 34%, 66%);
+}
+body {
+    background: var(--BG);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--TextSecondary);
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsl(230, 22%, 74%);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background: linear-gradient(45deg, #378fe6, #3eda82);
+  }
+  .slider:hover {
+      background: linear-gradient(45deg, #378fe6, #3eda82);
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+.header {
+    background: var(--TopBG);
+}
+
+.card {
+    background: var(--CardBG);
+    text-align: center;
+    border: 0;
+    padding: 20px;
+}
+.card h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--TextPrimary);
+}
+.card-text {
+    letter-spacing: 5px;
+}
+.card-title {
+    font-weight: 700;
+}
+.facebook {
+    border-top: 4px solid var(--Facebook);
+}
+.twitter {
+    border-top: 4px solid var(--Twitter);
+}
+.instagram {
+    border-top: 4px solid red;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-image: var(--Instagram) 1;
+}
+.youtube {
+    border-top: 4px solid var(--YouTube);
+}
+.gain {
+    color: var(--LimeGreen);
+    font-weight: 700;
+}
+.loss {
+    color: var(--BrightRed);
+    font-weight: 700;
+}
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 375px) {
+    
+}
