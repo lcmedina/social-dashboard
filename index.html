@@ -115,11 +115,11 @@
       }
     }
     //on load grab previous setting from local storage
-    (function () {
+     (function () {
       if (localStorage.getItem('theme') === 'darkTheme') {
-        setTheme(darkTheme)
+        setTheme('darkTheme')
       } else {
-        setTheme(lightTheme)
+        setTheme('lightTheme')
       }
     })();
   </script>
