@@ -27,13 +27,17 @@ body {
     font-weight: 400;
     color: var(--TextSecondary);
 }
+.container-fluid {
+    padding: 0;
+}
 
 /* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 50px;
+    height: 24px;
+    margin-left: 5px;
   }
   
   /* Hide default HTML checkbox */
@@ -59,8 +63,8 @@ body {
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 16px;
+    width: 16px;
     left: 4px;
     bottom: 4px;
     background: white;
@@ -89,24 +93,64 @@ body {
   }
 .header {
     background: var(--TopBG);
+    padding: 0 150px;
+    height: 245px;
+    z-index: 0;
 }
-
+.navbar {
+    align-items: flex-start;
+}
+.count h3 {
+    margin-top: 30px;
+    font-weight: 700;
+    color: var(--TextPrimary);
+}
+.count h6 {
+    font-weight: 700;
+    font-size: .9rem;
+}
+.toggle {
+    display: flex;
+    margin-top: 45px;
+    align-items: center;
+}
+.toggle span {
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration-color: var(--TextSecondary);
+}
+.row {
+    align-items: center;
+    justify-content: center;
+    margin-top: -111px;
+    z-index: 1;
+}
 .card {
     background: var(--CardBG);
     text-align: center;
     border: 0;
-    padding: 20px;
+    width: 256px;
+    height: 218px;
+    margin: 0px 15px;
 }
 .card h1 {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 3.2rem;
+    padding-top: 15px;
+    margin-bottom: 0;
     color: var(--TextPrimary);
 }
 .card-text {
     letter-spacing: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
 }
 .card-title {
+    color: var(--TextSecondary);
     font-weight: 700;
+    font-size: 13px;
+    padding-top: 30px;
 }
 .facebook {
     border-top: 4px solid var(--Facebook);
@@ -126,10 +170,12 @@ body {
 .gain {
     color: var(--LimeGreen);
     font-weight: 700;
+    font-size: 12px;
 }
 .loss {
     color: var(--BrightRed);
     font-weight: 700;
+    font-size: 12px;
 }
 .attribution { 
     font-size: 11px;

@@ -14,12 +14,12 @@
   <div class="container-fluid">
     <nav class="header navbar">
       <div class="count">
-        <h1>Social Media Dashboard</h1>
-        <h4>Total Followers: 23,004</h4>
+        <h3>Social Media Dashboard</h3>
+        <h6>Total Followers: 23,004</h6>
       </div>
     
       <div class="toggle">
-        Dark Mode
+        <span>Dark Mode</span>
         <label class="switch">
           <input type="checkbox" onclick="toggleTheme()">
           <span class="slider round"></span>
@@ -30,28 +30,28 @@
 
     <div class="row">
       <div class="card col-xxl-3 col-md-6 facebook">
-        <h6 class="card-title">@nathanf</h6>
+        <h6 class="card-title"><img src="/images/icon-facebook.svg" alt="facebook" /> @nathanf</h6>
         <h1>1987</h1>
         <p class="card-text">FOLLOWERS</p>
         <span class="gain"><img src="/images/icon-up.svg" alt="up arrow" /> 12 Today</span>
       </div>
     
       <div class="card col-xxl-3 col-md-6 twitter">
-        <h6 class="card-title">@nathanf</h6>
+        <h6 class="card-title"><img src="/images/icon-twitter.svg" alt="twitter" /> @nathanf</h6>
         <h1>1044</h1>
         <p class="card-text">FOLLOWERS</p>
         <span class="gain"><img src="/images/icon-up.svg" alt="up arrow" /> 99 Today</span>
       </div>
     
       <div class="card col-xxl-3 col-md-6 instagram">
-        <h6 class="card-title">@realnathanf</h6>
+        <h6 class="card-title"><img src="/images/icon-instagram.svg" alt="instagram"/> @realnathanf</h6>
         <h1>11k</h1>
         <p class="card-text">FOLLOWERS</p>
         <span class="gain"><img src="/images/icon-up.svg" alt="up arrow" /> 1099 Today</span>
       </div>
     
       <div class="card col-xxl-3 col-md-6 youtube">
-        <h6 class="card-title">Nathan F.</h6>
+        <p class="card-title"><img src="/images/icon-youtube.svg" alt="youtube" /> Nathan F.</p>
         <h1>8239</h1>
         <p class="card-text">SUBSCRIBERS</p>
         <span class="loss"><img src="/images/icon-down.svg" alt="down arrow" /> 144 Today</span>
@@ -115,7 +115,7 @@
       }
     }
     //on load grab previous setting from local storage
-    (() => {
+    (function () {
       if (localStorage.getItem('theme') === 'darkTheme') {
         setTheme(darkTheme)
       } else {
