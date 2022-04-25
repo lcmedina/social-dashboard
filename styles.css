@@ -93,15 +93,20 @@ body {
   }
 .header {
     background: var(--TopBG);
-    padding: 0 160px;
     height: 245px;
     z-index: 0;
+    display: grid;
+    grid-template-areas: 
+    "a b";
+    align-items: start;
+    padding-top: 35px;
 }
-.navbar {
-    align-items: flex-start;
+.count {
+    grid-area:  a;
+    justify-self: end;
+    padding-left: 160px;
 }
 .count h3 {
-    margin-top: 30px;
     font-weight: 700;
     font-size: 1.82rem;
     color: var(--TextPrimary);
@@ -112,8 +117,10 @@ body {
 }
 .toggle {
     display: flex;
-    margin-top: 45px;
+    padding-top: 15px;
+    padding-right: 168px;
     align-items: center;
+    grid-area: b;
 }
 .toggle span {
     font-size: 14px;
@@ -186,6 +193,7 @@ body {
 }
 .overview h4 {
     font-weight: 700;
+    color: var(--TextPrimary);
 }
 .overview-cards {
     display: grid;
@@ -221,6 +229,7 @@ body {
     justify-self: start;
     align-self: center;
     padding-bottom: 10px;
+    color: var(--TextPrimary);
 }
 .icon {
     grid-area: c;
@@ -243,6 +252,55 @@ body {
     color: hsl(228, 45%, 44%); 
 }
 
+@media (max-width: 1100px) {
+    .overview-cards {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(4, auto);
+        align-items: center;
+        justify-content: center;
+        column-gap: 20px;
+    }
+    .row {
+        display: grid;
+        grid-template-areas: 
+        "a b"
+        "c d";
+        row-gap: 20px;
+    }
+    .facebook {
+        grid-area: a;
+    }
+    .twitter {
+        grid-area: b;
+    }
+    .instagram {
+        grid-area: c;
+    }
+    .youtube {
+        grid-area: d;
+    }
+}
+
 @media (max-width: 375px) {
-    
+    .overview-cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    .overview {
+        padding: 30px 83px;
+    }
+    .row {
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d";
+    }
+    .header {
+        grid-template-areas: 
+        "a"
+        "b";
+    }
 }
