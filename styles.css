@@ -93,7 +93,7 @@ body {
   }
 .header {
     background: var(--TopBG);
-    padding: 0 150px;
+    padding: 0 160px;
     height: 245px;
     z-index: 0;
 }
@@ -103,6 +103,7 @@ body {
 .count h3 {
     margin-top: 30px;
     font-weight: 700;
+    font-size: 1.82rem;
     color: var(--TextPrimary);
 }
 .count h6 {
@@ -149,8 +150,11 @@ body {
 .card-title {
     color: var(--TextSecondary);
     font-weight: 700;
-    font-size: 13px;
+    font-size: 12px;
     padding-top: 30px;
+}
+.card-title img {
+    padding-right: 5px;
 }
 .facebook {
     border-top: 4px solid var(--Facebook);
@@ -177,6 +181,60 @@ body {
     font-weight: 700;
     font-size: 12px;
 }
+.overview {
+    padding: 46px 165px;
+}
+.overview h4 {
+    font-weight: 700;
+}
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 22px;
+    row-gap: 24px;
+    column-gap: 27px;
+}
+.overview-card {
+    background-color: var(--CardBG);
+    border-radius: 5px;
+    display: grid;
+    grid-template-areas: 
+    "a b b b c"
+    "d d d d d"
+    "e f f f g";
+    height: 125px;
+    width: 253px;
+}
+.overview-card p {
+    color: var(--TextSecondary);
+    font-weight: 700;
+    font-size: 15px; 
+    grid-area: b;
+    justify-self: start;
+    align-self: center;
+    padding-top: 25px;
+}
+.overview-card h2 {
+    grid-area: f;
+    font-weight: 700;
+    justify-self: start;
+    align-self: center;
+    padding-bottom: 10px;
+}
+.icon {
+    grid-area: c;
+    justify-self: center;
+    align-self: center;
+    padding-top: 10px;
+}
+.overview-card span {
+    grid-area: g;
+    justify-self: center;
+    align-self: center;
+    padding-right: 10px;
+}
+
 .attribution { 
     font-size: 11px;
     text-align: center; 
