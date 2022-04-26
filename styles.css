@@ -297,10 +297,21 @@ body {
         "b"
         "c"
         "d";
+        margin-top: -40px;
     }
     .header {
         grid-template-areas: 
         "a"
         "b";
+        align-content: flex-start;
+    }
+    .count {
+        padding-left: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--TextSecondary);
+    }
+    .toggle {
+        justify-content: space-between;
+        padding: 20px;
     }
 }
