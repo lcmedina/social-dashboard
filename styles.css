@@ -13,6 +13,7 @@
     --CardBG: hsl(227, 47%, 96%);
     --TextPrimary: hsl(230, 17%, 14%);
     --TextSecondary: hsl(228, 12%, 44%);
+    --CardHover: hsl(229, 15%, 85%);
 }
 .darkTheme {
     --BG: hsl(230, 17%, 14%);
@@ -20,6 +21,7 @@
     --CardBG: hsl(228, 28%, 20%);
     --TextPrimary: hsl(0, 0%, 100%);
     --TextSecondary: hsl(228, 34%, 66%);
+    --CardHover: hsl(229, 27%, 32%);
 }
 body {
     background: var(--BG);
@@ -145,6 +147,10 @@ html {
     height: 218px;
     margin: 0px 15px;
 }
+.card:hover {
+    cursor: pointer;
+    background: var(--CardHover);
+}
 .card h1 {
     font-weight: 700;
     font-size: 3.2rem;
@@ -217,6 +223,10 @@ html {
     "e f f f g";
     height: 125px;
     width: 253px;
+}
+.overview-card:hover {
+    cursor: pointer;
+    background: var(--CardHover);
 }
 .overview-card p {
     color: var(--TextSecondary);
