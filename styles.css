@@ -26,6 +26,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: var(--TextSecondary);
+    width: 100%;
 }
 html {
     margin: 0;
